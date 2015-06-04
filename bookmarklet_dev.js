@@ -112,7 +112,7 @@ if (!document.getElementById('ovipb336310')) {
     priority.clean(undefined);
     var match = priority[0];
     if (match.indexOf("phncdn.com")!= -1) { match = match.replace(/&amp;/g,"&"); }
-    window.location = "https://vidcast.herokuapp.com/?video_link="+encodeURIComponent(match);
+    window.location = "https://vidcast.dabble.me/?video_link="+encodeURIComponent(match);
   } else {
     document.getElementById('omipb336310').innerHTML = "No MP4, WEBM, or OGG files found on this page";
     setTimeout(function(){removeOverlayipb336310();},1800);

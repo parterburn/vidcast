@@ -259,7 +259,7 @@ CastPlayer.prototype.loadMedia = function(mediaIndex) {
     mediaInfo.contentType = 'video/mp4';
   }
   mediaInfo.metadata = new chrome.cast.media.MovieMediaMetadata({metadata: 0});
-  mediaInfo.metadata.images = [{'url': 'https://vidcast.herokuapp.com/imagefiles/video_image_art.png'}];
+  mediaInfo.metadata.images = [{'url': 'https://vidcast.dabble.me/imagefiles/video_image_art.png'}];
   mediaInfo.metadata.metadataType = 0;
   mediaInfo.metadata.subtitle = video_link;
   mediaInfo.metadata.title = 'Dabble.Me - free private journal';
