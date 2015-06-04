@@ -11,6 +11,7 @@ body {
 }
 
 #show_update {
+  display:inline-block;
   padding: 10px;
   background: #ffffe5;
   font-size: 15px;
