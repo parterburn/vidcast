@@ -5,6 +5,16 @@ body {
   text-align:center;
 }
 
+#update_bookmarklet {
+  display: none;
+  width:100%;
+  margin: 10px auto;
+  background: #ffffe5;
+  color: black;
+  font-size: 13px;
+  font-weight: bold;
+}
+
 #msg {
   font-weight:nromal;
   font-size: 90%;
