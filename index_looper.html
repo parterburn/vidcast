@@ -3,7 +3,7 @@
 <head>
 <title>VidCast Looper: Chromecast for the rest of the web</title>
 <link rel="icon" type="image/x-icon" href="imagefiles/favicon.png" />
-<link rel="stylesheet" type="text/css" href="css/CastVideos.css">
+<link rel="stylesheet" type="text/css" href="css/CastVideos.css?v=1">
 <link href='//fonts.googleapis.com/css?family=Roboto&subset=latin,cyrillic-ext,greek-ext,latin-ext' rel='stylesheet' type='text/css'>
 <script type="text/javascript" src="https://www.gstatic.com/cv/js/sender/v1/cast_sender.js"></script>
 <script src="CastVideos_looper.js"></script>
@@ -114,7 +114,7 @@ if (video_link=="") {
     document.getElementById("referrer-container").style.display = 'block';
     document.getElementById('referrer').href=document.referrer;
   }
-  
+
   if (window.location.search.indexOf("old_link=true") > 0) {
     document.getElementById("update_bookmarklet").style.display = 'block';
   }  
