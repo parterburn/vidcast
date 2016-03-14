@@ -251,7 +251,7 @@ CastPlayer.prototype.loadMedia = function(mediaIndex) {
   //console.log("loading...");
   var mediaInfo = new chrome.cast.media.MediaInfo(video_link);
   var ext = video_link.split('.').pop();
-  var exts = ['mkv','webm','mp4','jpeg','jpg','gif','png','bmp','webp'];
+  var exts = ['mkv','webm','mp4','jpeg','jpg','jpe','gif','png','bmp','webp','mka','flac','fla','m4a','mpa','ogg','oga','wav','wave','aac','mp3'];
   var is_valid = exts.indexOf(ext);
   if (is_valid > 0) {
     mediaInfo.contentType = getContentType(video_link);
@@ -830,10 +830,22 @@ function getContentType(url) {
     {ext: 'mp4', type: 'video'},
     {ext: 'jpeg', type: 'image'},
     {ext: 'jpg', type: 'image'},
+    {ext: 'jpe', type: 'image'},
     {ext: 'gif', type: 'image'},
     {ext: 'png', type: 'image'},
     {ext: 'bmp', type: 'image'},
-    {ext: 'webp', type: 'image'}
+    {ext: 'webp', type: 'image'},
+    {ext: 'mka', type: 'audio'},
+    {ext: 'flac', type: 'audio'},
+    {ext: 'fla', type: 'audio'},
+    {ext: 'm4a', type: 'audio'},
+    {ext: 'mpa', type: 'audio'},
+    {ext: 'ogg', type: 'audio'},
+    {ext: 'oga', type: 'audio'},
+    {ext: 'wav', type: 'audio'},
+    {ext: 'wave', type: 'audio'},
+    {ext: 'aac', type: 'audio'},
+    {ext: 'mp3', type: 'audio'}
   ];
   for (var i = 0; i < formats.length; i++) {
     if (formats[i].ext == ext) {
