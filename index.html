@@ -81,17 +81,19 @@ function gup( name ){
   var regexS = "[\\?&]"+name+"=([^&#]*)";  
   var regex = new RegExp( regexS );  
   var results = regex.exec( window.location.href ); 
-  if( results == null ) {
+  if( results === null ) {
     return "";
   } else {
     return results[1];
   }
 }
 
+console.log(gup('video_link'));
+
 var video_link = decodeURIComponent(gup('video_link'));
 video_link = decodeURIComponent(video_link);
 
-if (video_link=="") {
+if (video_link === "") {
   document.getElementById('main_video').remove();
 } else {
   document.getElementById('example').remove();
@@ -106,6 +108,7 @@ if (video_link=="") {
     CastPlayer.localPlayer.poster = video_link;
   } else {
     CastPlayer.localPlayer.src = video_link;
+    console.log(video_link);
     CastPlayer.localPlayer.addEventListener('loadeddata', CastPlayer.onMediaLoadedLocally.bind(CastPlayer, 0));
     CastPlayer.localPlayer.addEventListener( "error", function(e) {
             document.getElementById("playerstate").style.display = 'block';
