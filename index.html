@@ -7,6 +7,7 @@
 <link href='//fonts.googleapis.com/css?family=Roboto&subset=latin,cyrillic-ext,greek-ext,latin-ext' rel='stylesheet' type='text/css'>
 <script type="text/javascript" src="https://www.gstatic.com/cv/js/sender/v1/cast_sender.js"></script>
 <script src="CastVideos.js"></script>
+<script type="text/javascript" src="he.js"></script>
 <meta name="google-site-verification" content="AmFQw6ZD70dzi7lB9j0I_eRv-hmdYUqOl4dJGQ7yZ1U" />
 <link rel="canonical" href="https://vidcast.dabble.me" />
 <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'>
@@ -88,10 +89,8 @@ function gup( name ){
   }
 }
 
-console.log(gup('video_link'));
-
 var video_link = decodeURIComponent(gup('video_link'));
-video_link = decodeURIComponent(video_link);
+video_link = decodeURIComponent(he.decode(video_link));
 
 if (video_link === "") {
   document.getElementById('main_video').remove();
@@ -108,7 +107,6 @@ if (video_link === "") {
     CastPlayer.localPlayer.poster = video_link;
   } else {
     CastPlayer.localPlayer.src = video_link;
-    console.log(video_link);
     CastPlayer.localPlayer.addEventListener('loadeddata', CastPlayer.onMediaLoadedLocally.bind(CastPlayer, 0));
     CastPlayer.localPlayer.addEventListener( "error", function(e) {
             document.getElementById("playerstate").style.display = 'block';
